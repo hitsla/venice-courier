@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venice Courier Inc. | Fast & Reliable Courier Services - Los Angeles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gold: #1e6fbf;
+            --light-cream: #f5f8fc;
+            --warm-white: #ffffff;
+            --dark-gray: #1a2330;
+            --soft-gray: #6a7480;
+            --accent-peach: #cddff2;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-cream);
+            color: var(--dark-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(245, 248, 252, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 20px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(30, 111, 191, 0.15);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-gold);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gold);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .phone-btn {
+            background: var(--primary-gold);
+            color: var(--warm-white);
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .phone-btn:hover {
+            background: var(--dark-gray);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(30, 111, 191, 0.25);
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #1a2330 0%, #1e6fbf 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.25);
+            z-index: 1;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            z-index: 2;
+            padding: 0 20px;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #fff;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--primary-gold);
+            font-weight: 600;
+            background: rgba(255,255,255,0.95);
+            padding: 0 12px;
+            border-radius: 6px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.92);
+            margin-bottom: 50px;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-primary {
+            background: var(--primary-gold);
+            color: var(--warm-white);
+            padding: 16px 45px;
+            border: none;
+            border-radius: 35px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-primary:hover {
+            background: var(--dark-gray);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--warm-white);
+            padding: 16px 45px;
+            border: 2px solid var(--warm-white);
+            border-radius: 35px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-secondary:hover {
+            background: var(--warm-white);
+            color: var(--dark-gray);
+            transform: translateY(-3px);
+        }
+
+        .about {
+            padding: 100px 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 48px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            color: var(--dark-gray);
+        }
+
+        .about-text h2 span {
+            color: var(--primary-gold);
+        }
+
+        .about-text p {
+            font-size: 16px;
+            color: var(--soft-gray);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            height: 500px;
+            background: linear-gradient(135deg, var(--accent-peach) 0%, rgba(205, 223, 242, 0.5) 100%);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 180px;
+        }
+
+        .gallery {
+            padding: 100px 50px;
+            background: var(--warm-white);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 60px;
+            color: var(--dark-gray);
+        }
+
+        .section-title span {
+            color: var(--primary-gold);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .product-card {
+            background: var(--light-cream);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(30, 111, 191, 0.2);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--accent-peach) 0%, rgba(205, 223, 242, 0.5) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 90px;
+        }
+
+        .product-info {
+            padding: 35px;
+        }
+
+        .product-name {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 12px;
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: var(--soft-gray);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .review-section {
+            background: rgba(30, 111, 191, 0.08);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .review-author {
+            font-weight: 600;
+            color: var(--dark-gray);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .review-text {
+            font-size: 13px;
+            color: var(--soft-gray);
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .stars {
+            color: var(--primary-gold);
+            margin-bottom: 10px;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .product-price {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+        }
+
+        .order-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--primary-gold);
+            color: var(--warm-white);
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .order-btn:hover {
+            background: var(--dark-gray);
+            transform: translateY(-2px);
+        }
+
+        .services {
+            padding: 100px 50px;
+            background: linear-gradient(135deg, var(--light-cream) 0%, #fbfdff 100%);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 40px;
+            background: var(--warm-white);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(30, 111, 191, 0.15);
+        }
+
+        .service-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: var(--soft-gray);
+            line-height: 1.8;
+        }
+
+        .testimonials {
+            padding: 100px 50px;
+            background: var(--warm-white);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .testimonial-card {
+            background: var(--light-cream);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-stars {
+            color: var(--primary-gold);
+            font-size: 14px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            color: var(--soft-gray);
+            margin-bottom: 20px;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--dark-gray);
+            font-size: 15px;
+        }
+
+        .testimonial-role {
+            font-size: 13px;
+            color: var(--primary-gold);
+            margin-top: 5px;
+        }
+
+        .contact {
+            padding: 100px 50px;
+            background: var(--warm-white);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-size: 28px;
+            font-weight: 300;
+            color: var(--dark-gray);
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 15px;
+            color: var(--soft-gray);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .contact-info .footer-phone {
+            color: var(--primary-gold);
+            margin-top: 20px;
+        }
+
+        .contact-form {
+            background: var(--light-cream);
+            padding: 45px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 22px;
+        }
+
+        .contact-form label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 8px;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="tel"],
+        .contact-form input[type="email"],
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid rgba(30, 111, 191, 0.3);
+            border-radius: 6px;
+            font-size: 15px;
+            font-family: inherit;
+            background: var(--warm-white);
+            color: var(--dark-gray);
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .consent-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .consent-group input[type="checkbox"] {
+            margin-top: 4px;
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary-gold);
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .consent-group label {
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--soft-gray);
+            line-height: 1.6;
+            cursor: pointer;
+        }
+
+        .consent-group label a {
+            color: var(--primary-gold);
+            text-decoration: underline;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary-gold);
+            color: var(--warm-white);
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--dark-gray);
+            transform: translateY(-2px);
+        }
+
+        .form-note {
+            font-size: 12px;
+            color: var(--soft-gray);
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .form-success h3 {
+            font-size: 24px;
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+        }
+
+        .form-success p {
+            font-size: 15px;
+            color: var(--soft-gray);
+            line-height: 1.7;
+        }
+
+        footer {
+            background: var(--dark-gray);
+            color: var(--warm-white);
+            padding: 60px 50px;
+            margin-top: 100px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--primary-gold);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-gold);
+        }
+
+        .footer-phone {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-gold);
+            margin-top: 10px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; }
+            nav ul { gap: 15px; }
+            nav a { font-size: 12px; }
+            .hero h1 { font-size: 42px; }
+            .about { grid-template-columns: 1fr; padding: 60px 20px; gap: 40px; }
+            .gallery-grid, .service-grid, .testimonial-grid, .footer-content, .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .section-title { font-size: 36px; }
+            .contact-form { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Venice Courier</div>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="tel:+14243793738" class="phone-btn">Call Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Fast, Reliable <span>Courier</span> Services</h1>
+            <p>Same-day delivery and dedicated courier solutions across Los Angeles and Southern California</p>
+            <div class="cta-group">
+                <a href="#contact" class="cta-primary">Request a Pickup</a>
+                <a href="#services" class="cta-secondary">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about-text">
+            <h2>Delivered <span>On Time</span>, Every Time</h2>
+            <p>Venice Courier Inc. is a Los Angeles-based courier company providing dependable same-day, scheduled, and on-demand delivery services for businesses and individuals.</p>
+            <p>From legal documents and medical specimens to retail orders and time-sensitive packages, our drivers move your shipments quickly, securely, and with full tracking from pickup to drop-off.</p>
+            <p>Headquartered in Mar Vista at 12601 Venice Blvd, Unit B, we serve the entire greater Los Angeles area seven days a week.</p>
+        </div>
+        <div class="about-image">📦</div>
+    </section>
+
+    <section class="gallery" id="pricing">
+        <h2 class="section-title">Service <span>Packages</span></h2>
+
+        <div class="gallery-grid">
+            <div class="product-card">
+                <div class="product-image">⚡</div>
+                <div class="product-info">
+                    <div class="product-name">Rush / On-Demand Delivery</div>
+                    <div class="product-description">Direct point-to-point delivery within Los Angeles. Driver dispatched immediately for time-critical packages.</div>
+                    <div class="review-section">
+                        <div class="stars">★★★★★</div>
+                        <div class="review-author">Sarah M., Law Firm Admin</div>
+                        <div class="review-text">"Filed our court documents with 20 minutes to spare. Lifesavers."</div>
+                    </div>
+                    <div class="product-price">Starting at $35</div>
+                    <a href="tel:+14243793738" class="order-btn">Request Pickup</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">📅</div>
+                <div class="product-info">
+                    <div class="product-name">Same-Day Delivery</div>
+                    <div class="product-description">Scheduled same-day pickup and drop-off across the LA metro area. Ideal for routine business deliveries.</div>
+                    <div class="review-section">
+                        <div class="stars">★★★★★</div>
+                        <div class="review-author">Jessica & Michael</div>
+                        <div class="review-text">"Reliable every single time — we use them daily for client packages."</div>
+                    </div>
+                    <div class="product-price">Starting at $25</div>
+                    <a href="tel:+14243793738" class="order-btn">Request Pickup</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🏥</div>
+                <div class="product-info">
+                    <div class="product-name">Medical & Lab Courier</div>
+                    <div class="product-description">HIPAA-compliant transport of specimens, prescriptions, and medical documents between clinics, labs, and pharmacies.</div>
+                    <div class="review-section">
+                        <div class="stars">★★★★★</div>
+                        <div class="review-author">Amanda K., Clinic Manager</div>
+                        <div class="review-text">"Professional, discreet, and always on time. Our go-to for lab runs."</div>
+                    </div>
+                    <div class="product-price">Custom Quote</div>
+                    <a href="tel:+14243793738" class="order-btn">Request Pickup</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">📋</div>
+                <div class="product-info">
+                    <div class="product-name">Legal & Document Delivery</div>
+                    <div class="product-description">Confidential delivery of contracts, filings, and signed documents. Signature confirmation included.</div>
+                    <div class="review-section">
+                        <div class="stars">★★★★★</div>
+                        <div class="review-author">David T., Attorney</div>
+                        <div class="review-text">"They understand the urgency of court filings. Always reliable."</div>
+                    </div>
+                    <div class="product-price">Starting at $40</div>
+                    <a href="tel:+14243793738" class="order-btn">Request Pickup</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🚚</div>
+                <div class="product-info">
+                    <div class="product-name">Scheduled Routes</div>
+                    <div class="product-description">Recurring daily or weekly routes for businesses with regular delivery needs. Discounted contract pricing.</div>
+                    <div class="review-section">
+                        <div class="stars">★★★★★</div>
+                        <div class="review-author">Maria, Operations Lead</div>
+                        <div class="review-text">"We've contracted them for our daily route for two years — flawless."</div>
+                    </div>
+                    <div class="product-price">Contract Pricing</div>
+                    <a href="tel:+14243793738" class="order-btn">Get Quote</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">📦</div>
+                <div class="product-info">
+                    <div class="product-name">eCommerce & Retail Delivery</div>
+                    <div class="product-description">Local last-mile delivery for online stores and retailers. Real-time tracking and proof of delivery.</div>
+                    <div class="review-section">
+                        <div class="stars">★★★★★</div>
+                        <div class="review-author">Emily R., Boutique Owner</div>
+                        <div class="review-text">"Our customers love same-day local delivery. Big win for our shop!"</div>
+                    </div>
+                    <div class="product-price">Volume Pricing</div>
+                    <a href="tel:+14243793738" class="order-btn">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title">Why <span>Choose Us</span></h2>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="service-icon">⏱️</div>
+                <h3>Fast Response</h3>
+                <p>Drivers dispatched within minutes for rush orders. Most pickups within 60 minutes of your call.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📍</div>
+                <h3>Real-Time Tracking</h3>
+                <p>Track your delivery in real time from pickup to drop-off. Photo and signature proof of delivery on every job.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🛡️</div>
+                <h3>Insured & Vetted</h3>
+                <p>Fully insured drivers, background-checked and trained for confidential, medical, and legal deliveries.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">What Our Clients <span>Say</span></h2>
+
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <div class="testimonial-text">"Venice Courier has been our daily lab partner for years. Always punctual, always professional. Couldn't run our practice without them."</div>
+                <div class="testimonial-author">The Johnson Clinic</div>
+                <div class="testimonial-role">Medical Practice, Los Angeles</div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <div class="testimonial-text">"We've worked with them on hundreds of urgent filings. Reliable, fast, and they always communicate. Highly recommended for any law office."</div>
+                <div class="testimonial-author">Robert Chen</div>
+                <div class="testimonial-role">Managing Partner, Chen Law Group</div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <div class="testimonial-text">"Same-day delivery for our boutique customers turned into a real competitive edge. Their team is professional and great with our shoppers."</div>
+                <div class="testimonial-author">Lauren & Christopher</div>
+                <div class="testimonial-role">Retail Owners, Beverly Hills</div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <div class="testimonial-text">"Fast response, careful handling, and excellent communication. We trust them with our most time-sensitive shipments."</div>
+                <div class="testimonial-author">Priya M.</div>
+                <div class="testimonial-role">Office Manager, Hollywood</div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <div class="testimonial-text">"Needed a last-minute pickup across town and they had a driver on the way in 15 minutes. Saved our deal!"</div>
+                <div class="testimonial-author">Patricia G.</div>
+                <div class="testimonial-role">Real Estate Agent, Santa Monica</div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <div class="testimonial-text">"Best courier partner we've worked with in LA. Fair pricing, dependable drivers, and clear tracking. Highly recommend!"</div>
+                <div class="testimonial-author">James & Nicole</div>
+                <div class="testimonial-role">Small Business Owners, Brentwood</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Get in <span>Touch</span></h2>
+
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Ready to schedule a pickup?</h3>
+                <p>Fill out the form and our dispatch team will reach out shortly to confirm your delivery details, provide pricing, and schedule a driver.</p>
+                <p>We typically respond within minutes during business hours. For urgent pickups, please call us directly.</p>
+                <p style="margin-top: 25px;"><strong>Venice Courier Inc.</strong><br>
+                12601 Venice Blvd, Unit B<br>
+                Los Angeles, CA 90066</p>
+                <div class="footer-phone">+1 (424) 379-3738</div>
+            </div>
+
+            <div class="contact-form" id="contact-form-container">
+                <form id="consent-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+1 (___) ___-____">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service-type">Service Type</label>
+                        <select id="service-type" name="service-type">
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="rush">Rush / On-Demand Delivery</option>
+                            <option value="same-day">Same-Day Delivery</option>
+                            <option value="medical">Medical / Lab Courier</option>
+                            <option value="legal">Legal / Document Delivery</option>
+                            <option value="scheduled">Scheduled Routes</option>
+                            <option value="ecommerce">eCommerce / Retail Delivery</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Pickup & Delivery Details</label>
+                        <textarea id="message" name="message" placeholder="Pickup address, drop-off address, package contents, timing..."></textarea>
+                    </div>
+
+                    <div class="consent-group">
+                        <input type="checkbox" id="sms-consent" name="sms-consent">
+                        <label for="sms-consent">
+                            I agree to receive recurring automated text messages from <strong>VENICE COURIER INC.</strong> at the phone number provided. Message frequency varies. Message and data rates may apply. Reply HELP for help and STOP to cancel. This consent is not a condition of purchase.
+                            <br><a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submit-btn">Request Pickup</button>
+
+                    <p class="form-note">
+                        By submitting this form, you request courier service from <strong>VENICE COURIER INC.</strong> View our <a href="/privacy-policy" style="color: var(--primary-gold);">Privacy Policy</a> and <a href="/terms-of-service" style="color: var(--primary-gold);">Terms of Service</a>.
+                    </p>
+                </form>
+
+                <div class="form-success" id="form-success">
+                    <h3>Thank You!</h3>
+                    <p>Your request has been received. Our dispatch team will reach out shortly to confirm your pickup and delivery details.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Venice Courier Inc.</h4>
+                <p style="color: rgba(255,255,255,0.7); margin-bottom: 15px;">Fast, reliable courier and same-day delivery services across Los Angeles.</p>
+                <p style="color: rgba(255,255,255,0.7); font-size: 13px;">12601 Venice Blvd, Unit B<br>Los Angeles, CA 90066</p>
+                <div class="footer-phone">+1 (424) 379-3738</div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#pricing">Rush Delivery</a></li>
+                    <li><a href="#pricing">Same-Day Delivery</a></li>
+                    <li><a href="#pricing">Medical Courier</a></li>
+                    <li><a href="#pricing">Legal Delivery</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>For Business</h4>
+                <ul>
+                    <li><a href="tel:+14243793738">Scheduled Routes</a></li>
+                    <li><a href="tel:+14243793738">eCommerce Delivery</a></li>
+                    <li><a href="tel:+14243793738">Contract Pricing</a></li>
+                    <li><a href="tel:+14243793738">Request a Quote</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+14243793738">📞 Call Dispatch</a></li>
+                    <li><a href="#contact">Request a Pickup</a></li>
+                    <li style="color: rgba(255,255,255,0.7); margin-top: 15px; font-size: 13px;">Los Angeles, CA<br>Available 7 days a week</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Venice Courier Inc. All rights reserved. | Courier & Delivery Services in Los Angeles</p>
+            <p style="margin-top: 10px;"><a href="/privacy-policy" style="color: var(--primary-gold); text-decoration: none; margin: 0 10px;">Privacy Policy</a> <a href="/terms-of-service" style="color: var(--primary-gold); text-decoration: none; margin: 0 10px;">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        const form = document.getElementById('consent-form');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(function () {
+                form.style.display = 'none';
+                document.getElementById('form-success').style.display = 'block';
+            })
+            .catch(function () {
+                alert('There was an issue submitting the form. Please call us directly at +1 (424) 379-3738.');
+            });
+        });
+    </script>
+</body>
+</html>

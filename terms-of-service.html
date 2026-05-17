@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Venice Courier Inc. - Courier Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gold: #d4af82;
+            --light-cream: #faf8f5;
+            --warm-white: #ffffff;
+            --dark-gray: #2a2a2a;
+            --soft-gray: #7a7a7a;
+            --accent-peach: #e8d5c4;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-cream);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(250, 248, 245, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 20px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 130, 0.15);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            font-style: italic;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-gold);
+        }
+
+        .phone-btn {
+            background: var(--primary-gold);
+            color: var(--warm-white) !important;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .phone-btn:hover {
+            background: var(--dark-gray);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 175, 130, 0.25);
+        }
+
+        .page-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 50px 100px;
+        }
+
+        .page-content h1 {
+            font-size: 48px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: var(--dark-gray);
+        }
+
+        .page-content h1 span {
+            color: var(--primary-gold);
+        }
+
+        .last-updated {
+            font-size: 14px;
+            color: var(--soft-gray);
+            margin-bottom: 50px;
+        }
+
+        .page-content h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-top: 45px;
+            margin-bottom: 15px;
+        }
+
+        .page-content p {
+            font-size: 15px;
+            color: var(--soft-gray);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .page-content ul {
+            list-style: none;
+            margin-bottom: 15px;
+            padding-left: 0;
+        }
+
+        .page-content ul li {
+            font-size: 15px;
+            color: var(--soft-gray);
+            line-height: 1.8;
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        .page-content ul li::before {
+            content: '•';
+            color: var(--primary-gold);
+            position: absolute;
+            left: 0;
+        }
+
+        .page-content a {
+            color: var(--primary-gold);
+            text-decoration: underline;
+        }
+
+        footer {
+            background: var(--dark-gray);
+            color: var(--warm-white);
+            padding: 40px 50px;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+
+        .footer-bottom a {
+            color: var(--primary-gold);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .page-content {
+                padding: 50px 20px 60px;
+            }
+
+            .page-content h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Venice Courier</a>
+            <ul>
+                <li><a href="/#gallery">Portfolio</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#contact">Contact</a></li>
+                <li><a href="tel:+14243793738" class="phone-btn">Call Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-content">
+        <h1>Terms of <span>Service</span></h1>
+        <p class="last-updated">Last updated: March 10, 2026</p>
+
+        <p>Welcome to the Venice Courier website. By accessing or using our website and services, you agree to be bound by these Terms of Service. Please read them carefully before using our site or submitting any information.</p>
+
+        <h2>1. Services Overview</h2>
+        <p>Venice Courier Inc. provides courier and same-day delivery services in the Los Angeles area. Our website allows you to learn about our services, view pricing, and submit pickup requests. All services are subject to driver availability and scheduling.</p>
+
+        <h2>2. Consultation Requests</h2>
+        <p>Submitting a consultation request through our website does not constitute a binding contract or guarantee of service. After receiving your request, our team will contact you to discuss your event details, availability, and pricing. A service agreement will be provided separately for confirmed bookings.</p>
+
+        <h2>3. Pricing and Payment</h2>
+        <p>Prices displayed on our website represent starting prices and are provided for general reference only. Final pricing depends on delivery specifics including distance, package size, urgency, and handling requirements. Detailed quotes are provided when a pickup is requested. Payment terms are outlined in individual service agreements.</p>
+
+        <h2>4. SMS Communications</h2>
+        <p>If you opt in to receive SMS text messages from Venice Courier through our contact form, you consent to receive text messages related to scheduling and coordinating your event consultation. By opting in, you acknowledge and agree to the following:</p>
+        <ul>
+            <li>Message frequency varies based on your consultation needs</li>
+            <li>Message and data rates may apply depending on your mobile carrier plan</li>
+            <li>You can opt out at any time by replying <strong>STOP</strong> to any message</li>
+            <li>For help, reply <strong>HELP</strong> to any message or call us at +1 (424) 379-3738</li>
+            <li>SMS consent is not required as a condition of purchasing any services</li>
+        </ul>
+        <p>Supported carriers include but are not limited to AT&T, T-Mobile, Verizon, and Sprint. Service may not be available on all carriers.</p>
+
+        <h2>5. Intellectual Property</h2>
+        <p>All content on this website, including text, images, graphics, logos, and design elements, is the property of Venice Courier and is protected by applicable copyright and trademark laws. You may not reproduce, distribute, or use any content from this website without our prior written permission.</p>
+
+        <h2>6. User-Submitted Content</h2>
+        <p>When you submit information through our contact form or other communication channels, you grant Venice Courier permission to use that information for the purpose of responding to your inquiry and providing our services. We will handle your personal information in accordance with our <a href="/privacy-policy">Privacy Policy</a>.</p>
+
+        <h2>7. Website Availability</h2>
+        <p>We strive to keep our website accessible and functioning properly. However, we do not guarantee that the website will be available at all times or free from errors. We reserve the right to modify, suspend, or discontinue any aspect of the website at any time without notice.</p>
+
+        <h2>8. Limitation of Liability</h2>
+        <p>Venice Courier provides this website and its content on an "as is" basis. To the fullest extent permitted by law, we disclaim all warranties, express or implied. We shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the website or reliance on any information provided.</p>
+
+        <h2>9. Cancellations and Refunds</h2>
+        <p>Cancellation and refund policies are outlined in individual service agreements provided at the time of booking. Please review your service agreement for specific terms related to your event. For questions about cancellations, contact us directly.</p>
+
+        <h2>10. Governing Law</h2>
+        <p>These Terms of Service are governed by the laws of the State of California. Any disputes arising from these terms or your use of our website shall be resolved in the courts of Los Angeles County, California.</p>
+
+        <h2>11. Changes to These Terms</h2>
+        <p>We may update these Terms of Service from time to time. Changes will be posted on this page with an updated "Last updated" date. Your continued use of our website after changes are posted constitutes your acceptance of the revised terms.</p>
+
+        <h2>12. Contact Us</h2>
+        <p>If you have questions about these Terms of Service, please contact us:</p>
+        <ul>
+            <li><strong>Venice Courier</strong></li>
+            <li>Phone: <a href="tel:+14243793738">+1 (424) 379-3738</a></li>
+            <li>Los Angeles, CA</li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Venice Courier Inc.. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="/">Home</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/terms-of-service">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
